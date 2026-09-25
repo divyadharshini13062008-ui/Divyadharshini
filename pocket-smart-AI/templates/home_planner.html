@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="planner-wrap">
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <span class="eyebrow">
+                PLANNER 01
+            </span>
+
+            <h1>
+                Home Interior Planner
+            </h1>
+
+            <div
+                id="message"
+                class="message"
+                hidden
+            ></div>
+
+            <form data-planner="home">
+
+                <div class="form-grid">
+
+                    <div class="field">
+
+                        <label>
+                            Room type
+                        </label>
+
+                        <select
+                            name="room_type"
+                            required
+                        >
+                            <option>
+                                Living Room
+                            </option>
+
+                            <option>
+                                Bedroom
+                            </option>
+
+                            <option>
+                                Kitchen
+                            </option>
+
+                            <option>
+                                Study Room
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Budget (₹)
+                        </label>
+
+                        <input
+                            name="budget"
+                            type="number"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Style
+                        </label>
+
+                        <select
+                            name="style"
+                            required
+                        >
+                            <option>
+                                Modern
+                            </option>
+
+                            <option>
+                                Minimal
+                            </option>
+
+                            <option>
+                                Traditional
+                            </option>
+
+                            <option>
+                                Bohemian
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Room size
+                        </label>
+
+                        <select
+                            name="room_size"
+                            required
+                        >
+                            <option>
+                                Small
+                            </option>
+
+                            <option>
+                                Medium
+                            </option>
+
+                            <option>
+                                Large
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label>
+                            Preferred colors
+                        </label>
+
+                        <input
+                            name="preferred_colors"
+                            placeholder="e.g. white, blue and warm wood"
+                        >
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label>
+                            Additional requirements
+                        </label>
+
+                        <textarea
+                            name="additional_requirements"
+                            placeholder="Tell the planner anything else that matters."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        class="button"
+                        type="submit"
+                    >
+                        Generate plan
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div
+            id="results"
+            class="result-card results"
+        >
+
+            <p class="muted">
+                Your recommendation will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

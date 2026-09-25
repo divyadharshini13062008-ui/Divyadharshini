@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1"
+    >
+
+    <title>
+        {{ title or "PocketSmart AI" }}
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<nav class="nav">
+
+    <div class="container nav-inner">
+
+        <a
+            class="brand"
+            href="/"
+        >
+            PocketSmart AI
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/home-planner">
+                Home Planner
+            </a>
+
+            <a href="/party-planner">
+                Party
+            </a>
+
+            <a href="/jewelry-planner">
+                Jewelry
+            </a>
+
+            <a
+                data-auth-only
+                href="/history"
+            >
+                History
+            </a>
+
+            <a href="/login">
+                Login
+            </a>
+
+            <a href="/register">
+                Register
+            </a>
+
+            <a
+                data-auth-only
+                id="logout"
+                href="#"
+            >
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        PocketSmart AI ·
+        Budget-aware planning assistant
+
+    </div>
+
+</footer>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>

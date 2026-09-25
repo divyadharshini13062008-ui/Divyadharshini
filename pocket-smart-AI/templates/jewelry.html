@@ -1,0 +1,214 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="planner-wrap">
+
+    <div class="container">
+
+        <div class="form-card">
+
+            <span class="eyebrow">
+                PLANNER 03
+            </span>
+
+            <h1>
+                Jewelry Planner
+            </h1>
+
+            <div
+                id="message"
+                class="message"
+                hidden
+            ></div>
+
+            <form
+                data-planner="jewelry"
+                enctype="multipart/form-data"
+            >
+
+                <div class="form-grid">
+
+                    <div class="field">
+
+                        <label>
+                            Occasion
+                        </label>
+
+                        <input
+                            name="occasion"
+                            placeholder="Wedding, festival, party..."
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Budget (₹)
+                        </label>
+
+                        <input
+                            name="budget"
+                            type="number"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Jewelry type
+                        </label>
+
+                        <select
+                            name="jewelry_type"
+                            required
+                        >
+                            <option>
+                                Necklace
+                            </option>
+
+                            <option>
+                                Earrings
+                            </option>
+
+                            <option>
+                                Bracelet
+                            </option>
+
+                            <option>
+                                Ring
+                            </option>
+
+                            <option>
+                                Set
+                            </option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Metal preference
+                        </label>
+
+                        <input
+                            name="metal_preference"
+                            placeholder="Gold, silver, platinum..."
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Color preference
+                        </label>
+
+                        <input
+                            name="color_preference"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label>
+                            Style
+                        </label>
+
+                        <select name="style">
+
+                            <option>
+                                Classic
+                            </option>
+
+                            <option>
+                                Minimal
+                            </option>
+
+                            <option>
+                                Traditional
+                            </option>
+
+                            <option>
+                                Statement
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label>
+                            Optional image
+                        </label>
+
+                        <input
+                            name="image"
+                            type="file"
+                            accept="image/*"
+                        >
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label>
+                            Additional requirements
+                        </label>
+
+                        <textarea
+                            name="additional_requirements"
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        class="button"
+                        type="submit"
+                    >
+                        Generate plan
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div
+            id="results"
+            class="result-card results"
+        >
+
+            <p class="muted">
+                Your recommendation will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
